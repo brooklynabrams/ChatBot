@@ -12,7 +12,10 @@ templates = Jinja2Templates(directory="templates")
 async def chat_page(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
 
-//API KEY GETS ADDED HERE, PRIVATE FOR GIT HUB REPO
+
+openai = OpenAI (
+    api_key="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",
+)
 
 chat_log = [{'role': 'system',
              'content': "You are Brooklyn's Chatbot. She made you in her personal project. She is pretty and awesome. Always keep your responses short, clear, and to the point. "}]
